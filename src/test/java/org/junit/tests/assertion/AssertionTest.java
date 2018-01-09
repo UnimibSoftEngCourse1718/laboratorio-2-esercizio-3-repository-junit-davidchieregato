@@ -35,7 +35,15 @@ public class AssertionTest {
 //  }
 
     private static final String ASSERTION_ERROR_EXPECTED = "AssertionError expected";
+    
+    
+    @Test
+    public void assertGreaterThan() {
 
+        Assert.assertGreaterThan('b', 'a');
+        Assert.assertGreaterThan(2.5, 1.1);
+    }
+    
     @Test(expected = AssertionError.class)
     public void fails() {
         Assert.fail();
